@@ -1,0 +1,10 @@
+.sr-only{
+    background: yellow;
+    position: absolute;
+    clip: rect(0,0,0,0);
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: polygon(0,0,0,0);
+}

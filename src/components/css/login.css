@@ -2,27 +2,41 @@
 @import url(/style/theme.css);
 @import url(/style/base.css);
 
-
-/* 기본 스타일 */
-
 /* input 컴포넌트 */
 .form-input{
   --spacing: 10px;
+  --border-color: var(--gray-500);
+  --radius: 3px;
+  border-bottom: 1px solid #fff;
 
   display: flex;
   flex-flow: row nowrap;
   gap: var(--spacing);
 
+  label{
+    white-space: nowrap;
+  }
+
   input{
     flex-grow: 1;
-    border: 1px solid #aaa;
-    border-radius: 3px;
+    border: 0px;
+    border-radius: var(--radius);
     padding: 1px 1px 1px 8px;
     height: 24px;
     block-size: 24px;
     width: 100%;
   }
+
+  input:focus {
+    outline: 0;
+  }
+
+  &:focus-within {
+    border-bottom-color:red;
+  }
+  
 }
+
 
 /* button 컴포넌트 */
 .button{
@@ -36,13 +50,23 @@
   color: var(--color);
   border-radius: var(--radius);
   white-space: nowrap;
+
+  &:focus{
+    outline: 0;
+  }
+
+  &:focus-visible{
+    outline: 2px solid green;
+  }
 }
 
 
 /* 링크 텍스트 컴포넌트 (아이콘 유형) */
 .icon-link{
+  --color: var(--orange-200);
+
   [class*='fas']{
-    color: var(--orange-200);
+    color: var(--color);
     padding-right: 0.25em;
     padding-inline-end: 0.25em;
   }

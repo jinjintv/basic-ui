@@ -1,0 +1,19 @@
+@import url(/src/style/theme.css);
+
+:root{
+    --base-font-family: "SUIT Variable", sans-serif;
+}
+
+body {
+    font-family: var(--base-font-family);
+}
+
+/* login */
+
+.login {
+
+    --box-start-color: var(--orange-100);
+    --box-end-color: var(--orange-200);
+
+    background-image: radial-gradient(circle at right top, var(--orange-100), var(--orange-200));
+}
